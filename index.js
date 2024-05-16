@@ -10,11 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // Load OAuth 2.0 credentials from JSON file
-const credentials = require('./credentials.json');
 
 // Initialize Google Sheets API client
 const auth = new google.auth.GoogleAuth({
-  credentials: credentials,
+ 
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
